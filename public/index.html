@@ -296,11 +296,11 @@ table.lect td span.esc{color:var(--tinta2);font-weight:400}
 
 <div id="aviso"></div>
 
-<!-- ===== THREE.JS + ORBITCONTROLS (CDN) ===== -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>window.THREE||document.write('<scr'+'ipt src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"><\/scr'+'ipt>');</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
-<script>window.THREE&&!THREE.OrbitControls&&document.write('<scr'+'ipt src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"><\/scr'+'ipt>');</script>
+<!-- ===== THREE.JS + ORBITCONTROLS (servidor local, CDN de respaldo) ===== -->
+<script src="/vendor/three/build/three.min.js"></script>
+<script>window.THREE||document.write('<scr'+'ipt src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/scr'+'ipt>');</script>
+<script src="/vendor/three/examples/js/controls/OrbitControls.js"></script>
+<script>window.THREE&&!THREE.OrbitControls&&document.write('<scr'+'ipt src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"><\/scr'+'ipt>');</script>
 
 <script>
 "use strict";
