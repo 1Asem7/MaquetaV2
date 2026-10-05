@@ -53,6 +53,7 @@ npm run dev      # node --watch server.js (restarts on server.js changes only; j
    - the servo-failure toggle (`chkFalla`)
    - fine-adjust drag of the ESP32 and buzzer
    - a custom `.obj` + `.mtl` exporter (r128's OBJExporter doesn't write materials)
+   - the exploded view ("Despiece"). `definirPiezas()` lists each physical part with its category, table slot, rotation and measurements. `construirDespiece()` clones the existing meshes into `grupoDespiece` the first time the mode is entered. `irAZona()` frames the camera on one category, and `actualizarDespiece()` animates parts between assembled (`p0`) and laid-out (`p1`). While `estado.despiece` is on, the layer checkboxes, fine-adjust drag and pin labels are disabled. When you add a physical part to the model, also add it to `definirPiezas()` or it won't appear in the exploded view.
 8. **`bucle()`**: the single `requestAnimationFrame` loop. Animations (camera views, flood ramp, gate swing) are timed from the `THREE.Clock` elapsed time, not by accumulating `dt`. Cable rebuilds are throttled through `estado.cablesSucios`, and `reconstruirCableado()` regenerates the cable tubes.
 
 ### Gotchas
